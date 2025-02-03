@@ -80,9 +80,10 @@ The report is divided into multiple pages, each focusing on different aspects of
 
 ### **📌 Page 3: Shipping Analysis**  
 **📊 Visuals:**  
-- **Map Visual**: Sales distribution across locations (using Latitude & Longitude).  
-- **Bar Chart**: Sales by Country/City.  
-- **Heatmap**: International vs. Domestic Sales Comparison.  
+- **Column Chart**: Shipping charges by month.
+- **Column Chart**: Total Sales and total quantity by Internation or local shipping.   
+- **Scatter plot**:  Correlation between Ratings & Total Sales.  
+- **Matrix**: Insight into the sales, purchase per location.  
 
 **🔎 Key Insights:**  
 - Which locations contribute the most sales?  
@@ -90,69 +91,22 @@ The report is divided into multiple pages, each focusing on different aspects of
 
 ---
 
-### **📌 Page 4: Customer Demographics & Behavior**  
-**📊 Visuals:**  
-- **Bar Chart**: Sales by Buyer Age Group.  
-- **Pie Chart**: Sales by Buyer Gender.  
-- **Stacked Column Chart**: Product Category vs. Gender.  
-- **Line Chart**: Repeat Purchases Over Time.  
-
-**🔎 Key Insights:**  
-- What age group buys the most merchandise?  
-- Are there gender-based buying preferences?  
-- Do repeat customers show loyalty to specific products?  
-
----
-
-### **📌 Page 5: Sentiment Analysis (Reviews & Ratings)**  
-**📊 Visuals:**  
-- **Word Cloud**: Common Words in High-Rating Reviews.  
-- **Word Cloud**: Common Words in Low-Rating Reviews.  
-- **Bar Chart**: Ratings Distribution.  
-- **Scatter Plot**: Correlation between Ratings & Total Sales.  
-
-**🔎 Key Insights:**  
-- What words are frequently used in positive and negative reviews?  
-- Do higher ratings lead to more sales?  
-
----
-
-### **📌 Page 6: Pricing, Promotions & Discounts Impact**  
-**📊 Visuals:**  
-- **Line Chart**: Sales Trends Before & After Promotions.  
-- **Stacked Column Chart**: Discount Levels vs. Sales Impact.  
-- **Bar Chart**: Sales Revenue by Discounted vs. Non-Discounted Items.  
-
-**🔎 Key Insights:**  
-- How effective are discounts and promotions?  
-- Do discounts attract repeat customers or just one-time buyers?  
-
----
-
 ## **5. Technical Implementation & Custom Visuals**  
 - **ZoomCharts Drill Down Visuals**: Used on at least one report page for interactive exploration.  
 - **Power Query**: Data cleansing, transformation, and preparation.  
 - **DAX Measures**:  
-  - `Total Sales = SUM('TableName'[Total Sales])`  
-  - `Previous Month Sales = CALCULATE(SUM('TableName'[Total Sales]), SAMEPERIODLASTMONTH('TableName'[Order Date]))`  
-  - `Repeat Customers = DISTINCTCOUNT('TableName'[Order ID]) - DISTINCTCOUNTNOBLANK('TableName'[Buyer ID])`  
-
----
-
-## **6. Judging Criteria & Success Factors**  
-The report is evaluated based on:  
-
-✅ **Intuitiveness (15 pts)**:  
-- Clear layout, readable fonts, and appropriate chart selection.  
-- Effective storytelling through visual hierarchy and colors.  
-
-✅ **Interactivity (15 pts)**:  
-- Dynamic slicers, drill-through, and drill-down capabilities.  
-- Cross-chart filtering and touch-friendly navigation.  
-
-✅ **Insightfulness (15 pts)**:  
-- Meaningful KPIs and deep analytical insights.  
-- Accurate data representation and performance optimization.  
+  - `Avg Rating = AVERAGE(Data[Rating])`
+  - `Average Age = AVERAGE(Data[Buyer Age])`
+  - `Average Shipping Charges = AVERAGE(Data[Shipping Charges])`  
+  - `Avg Price of Product = AVERAGE(Data[Sales Price])`
+  - `No of Orders = DISTINCTCOUNT(Data[Order ID])`
+  - `No of Product = DISTINCTCOUNT(Data[Product ID])`
+  - `Previous Month Sales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Data[Order Date]))`
+  - `Total International Sales = CALCULATE([Total Sales], Data[International Shipping] = "Yes")`
+  - `Total Local Sales = CALCULATE([Total Sales], Data[International Shipping] = "No")`
+  - `Total Quantity = SUM(Data[Quantity])`
+  - `Total Sales = SUM(Data[Total Sales])`
+  - `Total Shipping Charges = SUM(Data[Shipping Charges])`
 
 ---
 
@@ -166,4 +120,3 @@ This report will enable **Lee Chatmen’s team** to make **data-driven decisions
 
 ---
 
-Would you like any refinements or additional sections? 😊
