@@ -110,7 +110,7 @@ The report is divided into multiple pages, each focusing on different aspects of
 
 ---
 
-## **7. Expected Outcome & Business Impact**  
+## **6. Expected Outcome & Business Impact**  
 📌 **Optimized Marketing & Product Strategy**: Identify best-sellers and optimize inventory.  
 📌 **Improved Customer Experience**: Leverage reviews to improve product quality.  
 📌 **Better Pricing & Discounting Decisions**: Analyze the impact of promotions.  
