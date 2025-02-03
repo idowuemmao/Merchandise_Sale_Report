@@ -51,22 +51,26 @@ The report is divided into multiple pages, each focusing on different aspects of
 
 ### **📌 Page 1: Executive Summary (Key Insights & KPIs)**  
 **📊 Visuals:**  
-- **KPI Cards**: Total Sales, Total Quantity Sold, Average Rating, Total Orders.  
-- **Line Chart**: Sales Trends over Time (Monthly).  
-- **Pie Chart**: Sales Breakdown by Product Category.  
+- **KPI Cards**: Total Sales, Total Quantity Sold, Average Rating, Total Orders, Total Product, Average Age.
+- **Map**: Sales Breakdown by Location.  
+- **Column Chart**: Sales Trends over Time (Monthly).  
+- **Pie Chart**: Sales Breakdown by Product Category.
+- **Pie Chart**: Sales Breakdown by Gender.
+- **Clustered Column Chart**: Sales and Quantity Breakdown by Product Category.  
 
 **🔎 Key Insights:**  
 - How is overall sales performance?  
-- What are the highest and lowest selling product categories?  
+- What are the highest and lowest selling product categories?
+- Gender with the highest total sales
 
 ---
 
 ### **📌 Page 2: Product Performance Analysis**  
 **📊 Visuals:**  
-- **Bar Chart**: Top 10 Best-Selling Products.  
-- **Bar Chart**: Bottom 10 Least-Selling Products.  
-- **Treemap**: Sales by Product Category.  
-- **KPI Card**: Best-Selling Product & Revenue Contribution.  
+- **Column Chart**: Top 5 Best-Selling Products and bottom 5 selling products.  
+- **Bar Chart**: Total Shipping Charges by Product Category and Product ID.  
+- **Bar Chart**: Top 7 reviews with the highest no of orders.  
+- **Matrix**: Total Product per Ratings in all locations
 
 **🔎 Key Insights:**  
 - Which products are driving the most revenue?  
@@ -74,7 +78,7 @@ The report is divided into multiple pages, each focusing on different aspects of
 
 ---
 
-### **📌 Page 3: Geographical Sales Insights**  
+### **📌 Page 3: Shipping Analysis**  
 **📊 Visuals:**  
 - **Map Visual**: Sales distribution across locations (using Latitude & Longitude).  
 - **Bar Chart**: Sales by Country/City.  
